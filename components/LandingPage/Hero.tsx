@@ -48,13 +48,23 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-10">
-              <button className="flex items-center justify-center gap-2 px-8 py-3.5 bg-foreground hover:bg-primary-800 dark:bg-white dark:hover:bg-secondary-200 dark:text-background text-white rounded-xl font-medium transition-all shadow-xl shadow-foreground/10 active:scale-[0.98]">
-                View Demo
+              <a
+                href="https://wa.me/919695146906"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-8 py-3.5 bg-foreground hover:bg-primary-800 dark:bg-white dark:hover:bg-secondary-200 dark:text-background text-white rounded-xl font-medium transition-all shadow-xl shadow-foreground/10 active:scale-[0.98]"
+              >
+                Chat on WhatsApp
                 <ArrowRight className="w-4 h-4" />
-              </button>
-              <button className="flex items-center justify-center gap-2 px-6 py-3.5 bg-white dark:bg-slate-900 border border-secondary-200 dark:border-secondary-800 hover:bg-secondary-50 dark:hover:bg-slate-800 text-foreground rounded-xl font-medium transition-all shadow-sm active:scale-[0.98]">
+              </a>
+              <a
+                href="https://wa.me/919695146906"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 px-6 py-3.5 bg-white dark:bg-slate-900 border border-secondary-200 dark:border-secondary-800 hover:bg-secondary-50 dark:hover:bg-slate-800 text-foreground rounded-xl font-medium transition-all shadow-sm active:scale-[0.98]"
+              >
                 Book a Call
-              </button>
+              </a>
             </div>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-y-3 gap-x-6 text-sm text-secondary-600 dark:text-secondary-400 font-medium">
