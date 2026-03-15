@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import {
   CheckCircle,
@@ -79,86 +80,16 @@ export default function Hero() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
             className="relative w-full max-w-lg mx-auto lg:mr-0 lg:ml-auto"
           >
-            {/* Main Mockup Card */}
-            <div className="relative bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-secondary-200/60 dark:border-secondary-800/60 p-6 md:p-8 backdrop-blur-sm z-10">
-              <div className="flex justify-between items-center mb-6">
-                <div>
-                  <h3 className="font-heading text-lg font-semibold text-foreground">
-                    Order Configuration
-                  </h3>
-                  <p className="text-xs text-secondary-500 mt-0.5">
-                    Order #ORD-8439
-                  </p>
-                </div>
-                <span className="bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 text-xs px-2.5 py-1 rounded-full font-semibold">
-                  In Progress
-                </span>
-              </div>
-
-              <div className="space-y-4">
-                {/* Upload Section */}
-                <motion.div
-                  className="flex gap-4 items-center bg-secondary-50/50 dark:bg-secondary-800/20 p-4 rounded-xl border border-secondary-200/50 dark:border-secondary-700/50 transition-colors"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-secondary-200/50 dark:bg-secondary-800/80 flex items-center justify-center shrink-0">
-                    <UploadCloud className="text-secondary-600 dark:text-secondary-400 w-5 h-5" />
-                  </div>
-                  <div className="flex-1">
-                    <p className="text-sm font-semibold text-foreground">
-                      company_logo_final.ai
-                    </p>
-                    <p className="text-xs text-secondary-500">
-                      Vector Graphic · 2.4 MB
-                    </p>
-                  </div>
-                  <CheckCircle className="text-green-500 w-5 h-5 shrink-0" />
-                </motion.div>
-
-                {/* Specs Layer */}
-                <div className="grid grid-cols-2 gap-4">
-                  <motion.div
-                    className="bg-secondary-50/50 dark:bg-secondary-800/20 p-4 rounded-xl border border-secondary-200/50 dark:border-secondary-700/50 transition-colors"
-                  >
-                    <p className="text-xs text-secondary-500 font-medium mb-1.5 flex items-center gap-1.5">
-                      <Shirt className="w-3.5 h-3.5" /> Fabric Type
-                    </p>
-                    <p className="text-sm font-semibold text-foreground">
-                      100% Premium Cotton
-                    </p>
-                  </motion.div>
-                  <motion.div
-                    className="bg-secondary-50/50 dark:bg-secondary-800/20 p-4 rounded-xl border border-secondary-200/50 dark:border-secondary-700/50 transition-colors"
-                  >
-                    <p className="text-xs text-secondary-500 font-medium mb-1.5 flex items-center gap-1.5">
-                      <Layers className="w-3.5 h-3.5" /> Weight (GSM)
-                    </p>
-                    <p className="text-sm font-semibold text-foreground flex justify-between items-center">
-                      220 GSM Thick
-                      <Settings className="w-4 h-4 text-secondary-400" />
-                    </p>
-                  </motion.div>
-                </div>
-
-                {/* Quantity & Summary */}
-                <div className="flex items-center justify-between border-t border-secondary-100 dark:border-secondary-800 pt-5 mt-2">
-                  <div>
-                    <p className="text-xs text-secondary-500 font-medium mb-1">
-                      Total Quantity
-                    </p>
-                    <p className="text-2xl font-bold font-heading text-foreground">
-                      250 <span className="text-sm font-normal text-secondary-500">pcs</span>
-                    </p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-xs text-secondary-500 font-medium mb-1">
-                      Est. Fulfillment
-                    </p>
-                    <p className="text-sm font-semibold text-foreground">
-                      12 - 14 Days
-                    </p>
-                  </div>
-                </div>
-              </div>
+            {/* Main Image Card */}
+            <div className="relative bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-secondary-200/60 dark:border-secondary-800/60 overflow-hidden aspect-4/5 sm:aspect-square md:aspect-4/5 lg:aspect-square xl:aspect-4/5">
+              <Image
+                src="/images/hero-tshirt.png"
+                alt="Premium Custom T-Shirt with printed Logo"
+                fill
+                className="object-cover transition-transform duration-700 hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
             </div>
 
             {/* Floating Decorative Elements */}
@@ -171,8 +102,8 @@ export default function Hero() {
                 <CheckCircle className="w-4 h-4 text-foreground dark:text-white" />
               </div>
               <div>
-                <p className="text-sm font-bold text-foreground">Quote Approved!</p>
-                <p className="text-xs text-secondary-500">Ready for production</p>
+                <p className="text-sm font-bold text-foreground">Premium Quality</p>
+                <p className="text-xs text-secondary-500">Perfect print every time</p>
               </div>
             </motion.div>
           </motion.div>
